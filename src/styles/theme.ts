@@ -19,11 +19,9 @@ export default {
   },
   colors: {
     white: '#FAFAFA',
-    black: '#333333',
-    lightGray: '#ECEFF4',
-    gray: '#8190A5',
-    secondaryGray: '#47525E',
-    darkGray: '#3B4252'
+    lightGray: '#F0F0F0',
+    darkBlue: '#3B4252',
+    orange: '#F27326'
   },
   spacings: {
     xxsmall: '0.3rem',
