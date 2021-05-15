@@ -14,7 +14,6 @@ ${({ theme }) => css`
   }
   body {
     font-family: ${theme.font.family};
-    font-weight: ${theme.font.light};
     font-size: ${theme.font.sizes.medium};
   }
 `}
