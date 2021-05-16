@@ -37,4 +37,15 @@ describe('<Heading />', () => {
       color: theme.colors.orange
     })
   })
+
+  it('should render a heading with a line at the bottom', () => {
+    renderWithTheme(<Heading lineBottom>Test</Heading>)
+    expect(screen.getByText(/test/i)).toHaveStyleRule(
+      'border-bottom',
+      `0.5rem solid ${theme.colors.orange}`,
+      {
+        modifier: '::after'
+      }
+    )
+  })
 })
