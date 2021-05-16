@@ -1,7 +1,16 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.main`
-  background-color: black;
-  height: 100vh;
-  color: white;
+  ${({ theme }) => css`
+    background-color: ${theme.colors.darkBlue};
+    height: 100vh;
+  `}
+`
+
+export const Container = styled.div`
+  ${({ theme }) => css`
+    width: 100%;
+    max-width: ${theme.grid.container};
+    margin: 0 auto;
+  `}
 `

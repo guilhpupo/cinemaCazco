@@ -1,6 +1,13 @@
+import Header from 'components/Header'
 import React from 'react'
-import { Wrapper } from './styles'
+import { Wrapper, Container } from './styles'
 
 export default function Home() {
-  return <Wrapper></Wrapper>
+  return (
+    <Wrapper>
+      <Container>
+        <Header />
+      </Container>
+    </Wrapper>
+  )
 }

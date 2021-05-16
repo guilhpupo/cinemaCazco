@@ -1,5 +1,5 @@
 import styled, { css, DefaultTheme } from 'styled-components'
-import { SearchButtonProps } from '.'
+import { ButtonProps } from '.'
 
 const wrapperModifiers = {
   normal: () => css`
@@ -17,7 +17,7 @@ const wrapperModifiers = {
     color: ${theme.colors.white};
   `
 }
-export const Wrapper = styled.button<SearchButtonProps>`
+export const Wrapper = styled.button<ButtonProps>`
   ${({ theme, color, size }) => css`
     background-color: transparent;
     border: none;

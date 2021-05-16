@@ -1,22 +1,22 @@
 import React from 'react'
 
-import { MdSearch as SearchIcon } from 'react-icons/md'
-
 import { Wrapper } from './styles'
 
-export type SearchButtonProps = {
+export type ButtonProps = {
   type?: 'button' | 'submit'
   color?: 'white' | 'darkBlue'
   size?: 'normal' | 'small'
+  icon?: JSX.Element
 }
-const SearchButton = ({
+const Button = ({
   color = 'darkBlue',
   size = 'normal',
-  type = 'button'
-}: SearchButtonProps) => (
+  type = 'button',
+  icon
+}: ButtonProps) => (
   <Wrapper type={type} color={color} size={size}>
-    <SearchIcon aria-label="Search" />
+    {icon}
   </Wrapper>
 )
 
-export default SearchButton
+export default Button

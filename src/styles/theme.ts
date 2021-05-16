@@ -1,4 +1,7 @@
 export default {
+  grid: {
+    container: '130rem'
+  },
   border: {
     radius: '0.5rem'
   },
@@ -13,14 +16,14 @@ export default {
       small: '1.4rem',
       medium: '1.6rem',
       large: '1.8rem',
-      xlarge: '2.0rem',
-      xxlarge: '2.4rem'
+      xlarge: '2.4rem',
+      xxlarge: '2.8rem'
     }
   },
   colors: {
     white: '#FAFAFA',
     lightGray: '#F0F0F0',
-    darkBlue: '#3B4252',
+    darkBlue: '#06092B',
     orange: '#F27326'
   },
   spacings: {
