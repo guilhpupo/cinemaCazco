@@ -2,28 +2,18 @@ import Button from 'components/Button'
 import { MdSearch as SearchIcon } from 'react-icons/md'
 import React, { useState } from 'react'
 
-import { Wrapper, InputBar, TextField, RadioGroup } from './styles'
-import RadioButton, {
-  RadioButtonColors,
-  RadioValues
-} from 'components/RadioButton'
+import { Wrapper, InputBar, TextField } from './styles'
 
-export type SearchBarProps = {
-  radioColor?: RadioButtonColors
-}
+import { searchTitles } from 'services/titles'
 
-const SearchBar = ({ radioColor }: SearchBarProps) => {
+const SearchBar = () => {
   const [text, setText] = useState('')
-  const [radioValue, setRadioValue] = useState<RadioValues>('movie')
 
-  function onValueChange(value: RadioValues) {
-    setRadioValue(value)
-  }
   return (
     <Wrapper
       onSubmit={(e) => {
         e.preventDefault()
-        console.log(`buscar: ${text} em ${radioValue}`)
+        searchTitles(text)
       }}
     >
       <InputBar>
@@ -37,22 +27,6 @@ const SearchBar = ({ radioColor }: SearchBarProps) => {
           type="submit"
         />
       </InputBar>
-      <RadioGroup>
-        <RadioButton
-          color={radioColor}
-          onChange={() => onValueChange('movie')}
-          checked={radioValue === 'movie'}
-        >
-          Movies
-        </RadioButton>
-        <RadioButton
-          color={radioColor}
-          onChange={() => onValueChange('series')}
-          checked={radioValue === 'series'}
-        >
-          TV Shows
-        </RadioButton>
-      </RadioGroup>
     </Wrapper>
   )
 }

@@ -7,12 +7,13 @@ export const Wrapper = styled.form`
     width: 100%;
 
     @media (min-width: 769px) {
-      width: 35rem;
+      min-width: 30rem;
+      width: 50%;
 
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      top: ${theme.spacings.medium};
+      top: calc(${theme.spacings.medium}*1.5);
     }
   `}
 `
@@ -37,13 +38,5 @@ export const TextField = styled.input`
     &:focus {
       outline: 0;
     }
-  `}
-`
-
-export const RadioGroup = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    align-self: flex-end;
-    margin-top: ${theme.spacings.xsmall};
   `}
 `

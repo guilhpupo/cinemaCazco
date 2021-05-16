@@ -42,7 +42,7 @@ const Header = () => {
 
       <MediaMatch showOnDesktop>
         <SearchBarWrapper>
-          <SearchBar radioColor="orange" />
+          <SearchBar />
         </SearchBarWrapper>
       </MediaMatch>
 

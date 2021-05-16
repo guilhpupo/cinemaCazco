@@ -3,7 +3,7 @@ import React from 'react'
 import CardSlider from '.'
 import { renderWithTheme } from 'utils/tests/helpers'
 
-import items from './mock'
+import items from '../../mocks/Top10TvShows'
 
 describe('<CardSlider />', () => {
   it('should render with 5 active items', () => {

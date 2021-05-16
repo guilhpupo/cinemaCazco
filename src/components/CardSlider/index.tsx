@@ -1,8 +1,8 @@
 import React from 'react'
 
 import {
-  MdArrowForward as ArrowRight,
-  MdArrowBack as ArrowLeft
+  MdArrowForward as ArrowRightIcon,
+  MdArrowBack as ArrowLeftIcon
 } from 'react-icons/md'
 import Slider, { SliderSettings } from 'utils/components/Slider'
 import Card, { CardProps } from 'components/Card'
@@ -11,7 +11,7 @@ import { Wrapper } from './styles'
 
 const settings: SliderSettings = {
   arrows: true,
-  slidesToShow: 4.9,
+  slidesToShow: 4.7,
   infinite: false,
   lazyLoad: 'ondemand',
   responsive: [
@@ -65,8 +65,8 @@ const settings: SliderSettings = {
       }
     }
   ],
-  nextArrow: <ArrowRight aria-label="next games" />,
-  prevArrow: <ArrowLeft aria-label="previous games" />
+  nextArrow: <ArrowRightIcon aria-label="next" />,
+  prevArrow: <ArrowLeftIcon aria-label="previous" />
 }
 
 export type CardSliderProps = {

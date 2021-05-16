@@ -3,19 +3,20 @@ import React from 'react'
 import { Caption, Image, Wrapper, Title, Rating } from './styles'
 
 export type CardProps = {
-  img: string
+  poster: string
   title: string
   year: string
-  rating: string
+  imdbRating: string
 }
-const Card = ({ img, rating, title, year }: CardProps) => (
+const Card = ({ poster, imdbRating, title, year }: CardProps) => (
   <Wrapper>
-    <Image src={img} role="img" aria-label={title} />
+    <Image src={poster} role="img" aria-label={title} />
     <Caption>
       <Title>
-        {title} ({year})
+        {title}
+        <br />({year})
       </Title>
-      <Rating>{rating}</Rating>
+      <Rating>{imdbRating}</Rating>
     </Caption>
   </Wrapper>
 )
