@@ -22,9 +22,9 @@ const wrapperModifiers = {
     &::after {
       position: absolute;
       left: 0;
-      bottom: -0.5rem;
+      bottom: -1rem;
       content: '';
-      width: 5rem;
+      width: 2.5rem;
       border-bottom: 0.5rem solid ${theme.colors.orange};
     }
   `
