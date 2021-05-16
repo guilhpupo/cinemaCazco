@@ -40,7 +40,6 @@ export const FullScreenSearch = styled.div<FullScreenSearchProps>`
   ${({ theme, isOpen }) => css`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     background: ${theme.colors.white};
     position: fixed;
     z-index: ${theme.layers.menu};

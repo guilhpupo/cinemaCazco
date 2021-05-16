@@ -23,15 +23,15 @@ const Header = () => {
   return (
     <Wrapper>
       <LogoWrapper>
-        <MediaMatch lessThan="medium">
+        <MediaMatch showOnMobo>
           <Logo size="small" />
         </MediaMatch>
-        <MediaMatch greaterThan="medium">
+        <MediaMatch showOnDesktop>
           <Logo />
         </MediaMatch>
       </LogoWrapper>
 
-      <MediaMatch lessThan="medium">
+      <MediaMatch showOnMobo>
         <ButtonWrapper onClick={() => setIsOpen(true)}>
           <Button
             icon={<SearchIcon aria-label="Open Search" />}
@@ -40,7 +40,7 @@ const Header = () => {
         </ButtonWrapper>
       </MediaMatch>
 
-      <MediaMatch greaterThan="medium">
+      <MediaMatch showOnDesktop>
         <SearchBarWrapper>
           <SearchBar radioColor="orange" />
         </SearchBarWrapper>

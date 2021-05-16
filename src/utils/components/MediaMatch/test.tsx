@@ -11,10 +11,10 @@ describe('<MediaMatch />', () => {
   beforeEach(() => {
     render(
       <>
-        <MediaMatch greaterThan="medium">
+        <MediaMatch showOnDesktop>
           <h1 data-testid="desktop">Desktop</h1>
         </MediaMatch>
-        <MediaMatch lessThan="medium">
+        <MediaMatch showOnMobo>
           <h1 data-testid="mobile">Mobile</h1>
         </MediaMatch>
       </>
@@ -30,10 +30,10 @@ describe('<MediaMatch />', () => {
   })
 
   it('should show or hide based on the media passed', () => {
-    expect(desktopHeading.parentElement).toHaveStyleRule('display', 'block', {
-      media: '(min-width: 768px)'
+    expect(desktopHeading.parentElement).toHaveStyleRule('display', 'flex', {
+      media: '(min-width: 769px)'
     })
-    expect(mobileHeading.parentElement).toHaveStyleRule('display', 'block', {
+    expect(mobileHeading.parentElement).toHaveStyleRule('display', 'flex', {
       media: '(max-width: 768px)'
     })
   })

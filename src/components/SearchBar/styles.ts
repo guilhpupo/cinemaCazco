@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
 
 export const Wrapper = styled.form`
   ${({ theme }) => css`
@@ -7,14 +6,14 @@ export const Wrapper = styled.form`
     flex-direction: column;
     width: 100%;
 
-    ${media.greaterThan('medium')`
+    @media (min-width: 769px) {
       width: 35rem;
-      
+
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
       top: ${theme.spacings.medium};
-    `}
+    }
   `}
 `
 export const InputBar = styled.div`

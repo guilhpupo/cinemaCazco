@@ -10,6 +10,8 @@ export const Wrapper = styled.main`
 export const Container = styled.div`
   ${({ theme }) => css`
     width: 100%;
+    padding: ${theme.spacings.xsmall};
+
     max-width: ${theme.grid.container};
     margin: 0 auto;
   `}
