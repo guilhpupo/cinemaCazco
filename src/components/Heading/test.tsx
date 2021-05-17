@@ -11,7 +11,7 @@ describe('<Heading />', () => {
     renderWithTheme(<Heading>Test</Heading>)
 
     expect(screen.getByText(/test/i)).toHaveStyle({
-      fontSize: theme.font.sizes.xlarge,
+      fontSize: theme.font.sizes.medium,
       fontWeight: theme.font.normal
     })
   })
@@ -19,7 +19,7 @@ describe('<Heading />', () => {
     renderWithTheme(<Heading size="large">Test</Heading>)
 
     expect(screen.getByText(/test/i)).toHaveStyle({
-      fontSize: theme.font.sizes.xxlarge,
+      fontSize: theme.font.sizes.xlarge,
       fontWeight: theme.font.bold
     })
   })
