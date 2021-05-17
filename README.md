@@ -70,7 +70,6 @@ $ yarn install
 # Rename .env-sample to .env
 $ rename .env-sample .env
 # Get your own API Key on http://www.omdbapi.com/apikey.aspx and paste it on .env file
-<a href="http://www.omdbapi.com/apikey.aspx ">Get your Free API Key</a>
 # Run Aplication
 $ yarn start
 ```
