@@ -87,7 +87,7 @@ Go to http://localhost:3000/ to see the application running.
 
 # :bug: Issues
 
-Create a <a href="https://github.com/guilhpupo/cazcoCinema/issues">new issue report</a>, it will be an honor to be able to help you solve and further improve our application.
+Create a <a href="https://github.com/guilhpupo/cinemaCazco/issues">new issue report</a>, it will be an honor to be able to help you solve and further improve our application.
 
 # :page_facing_up: License
 
