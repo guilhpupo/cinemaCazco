@@ -1,46 +1,96 @@
-# Getting Started with Create React App
+<h1 align="center">
+   Cinema Cazco
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  Cinema Cazco is an application where you can get ratings, images and more about your favorite movies and tv series!
+</p>
 
-## Available Scripts
+<hr />
 
-In the project directory, you can run:
+<p align="center">In this project, I practiced very important concepts from ReactJS, like React Router, React Hooks, React Components, Typescript, Axios, Styled Components and more.
+</p>
 
-### `yarn start`
+<div align="center">
+  <sub> Made with 💖 by
+    <a href="https://github.com/guilhpupo">Guilherme Pupo
+  </sub>
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# 📌 Contents
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Screenshots](#camera-screenshots)
+- [Technologies](#rocket-technologies)
+- [How to Run](#computer-how-to-run)
+- [Commands](#sparkles-commands)
+- [Issues](#bug-issues)
+- [License](#page_facing_up-license)
 
-### `yarn test`
+# :camera: Screenshots
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h2>Desktop (1366x768)</h2>
+<div align="center" display="flex">
+   <img src="./public/screenshots/home.png" width="400px">
+   <img src="./public/screenshots/search-results.png" width="400px">
+   <img src="./public/screenshots/title.png" width="400px">   
+</div>
 
-### `yarn build`
+<h2>Mobo (375x667)</h2>
+<div align="center" display="flex">
+   <img src="./public/screenshots/home-mobo.png" width="400px">
+   <img src="./public/screenshots/search-results-mobo.png" width="400px">
+   <img src="./public/screenshots/title-mobo.png" width="400px">   
+</div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# :rocket: Technologies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project was made using the follow technologies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+- [ReactJS](https://reactjs.org/)
+- [React Router](https://reactrouter.com/)
+- [React Icons](https://github.com/react-icons/react-icons)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Styled Components](https://styled-components.com/)
+- [Styled Media Query](https://github.com/morajabi/styled-media-query)
+- [Axios](https://github.com/axios/axios)
+- [Jest](https://jestjs.io/)
+- [Testing Library](https://testing-library.com/)
+- [Keen Slider](https://github.com/rcbyr/keen-slider)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# :computer: How to run
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# Clone Repository
+$ git clone https://github.com/guilhpupo/cinemaCazco && cd cinemaCazco
+# Install Dependencies
+$ yarn install
+# Rename .env-sample to .env
+$ rename .env-sample .env
+# Get your own API Key on http://www.omdbapi.com/apikey.aspx and paste it on .env file
+<a href="http://www.omdbapi.com/apikey.aspx ">Get your Free API Key</a>
+# Run Aplication
+$ yarn start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Go to http://localhost:3000/ to see the application running.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# :sparkles: Commands
 
-## Learn More
+- `start`: runs your application on `localhost:3000`
+- `build`: creates the production build version
+- `lint`: runs the linter in all components and pages
+- `format`: runs the prettier in all components and pages
+- `test`: runs jest to test all components and pages
+- `test:watch`: runs jest in watch mode
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# :bug: Issues
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Create a <a href="https://github.com/guilhpupo/cazcoCinema/issues">new issue report</a>, it will be an honor to be able to help you solve and further improve our application.
+
+# :page_facing_up: License
+
+This project is under the [MIT License](./LICENSE) |
+Made with 💖 by [Guilherme Pupo](https://www.linkedin.com/in/guilhpupo/).

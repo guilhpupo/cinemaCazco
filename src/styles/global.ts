@@ -16,7 +16,18 @@ ${({ theme }) => css`
     font-family: ${theme.font.family};
     font-size: ${theme.font.sizes.medium};
   }
+  ::-webkit-scrollbar {
+    width: 1rem;
+  }
+  ::-webkit-scrollbar-track {
+    background: ${theme.colors.darkBlue};
+  }
+  ::-webkit-scrollbar-thumb {
+    background: ${theme.colors.white};
+    border-radius: 1rem;
+  }
 `}
+
 `
 
 export default GlobalStyles

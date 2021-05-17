@@ -2,29 +2,28 @@ import React from 'react'
 
 import { screen } from '@testing-library/react'
 
-import Card, { CardProps } from '.'
 import { renderWithTheme } from 'utils/tests/helpers'
 
-const args: CardProps = {
-  img: 'https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg',
-  title: 'Forrest Gump',
-  year: '1994',
-  rating: '8.8/10'
-}
+import mock from 'mocks/Top10Movies'
+
+import Card from '.'
+
 describe('<Card />', () => {
   it('should render correctly', () => {
-    renderWithTheme(<Card {...args} />)
+    renderWithTheme(<Card {...mock[0]} />)
 
-    expect(screen.getByRole('img', { name: /forrest gump/i })).toHaveAttribute(
+    expect(
+      screen.getByRole('img', { name: /the shawshank redemption/i })
+    ).toHaveAttribute(
       'src',
-      'https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg'
+      'https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg'
     )
     expect(
-      screen.getByRole('heading', { name: /forrest gump/i })
+      screen.getByRole('heading', { name: /the shawshank redemption/i })
     ).toBeInTheDocument()
     expect(
       screen.getByRole('heading', {
-        name: /8.8\/10/i
+        name: /9.3/i
       })
     ).toBeInTheDocument()
   })

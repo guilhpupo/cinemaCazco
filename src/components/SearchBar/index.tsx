@@ -1,19 +1,20 @@
+import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
+
 import Button from 'components/Button'
 import { MdSearch as SearchIcon } from 'react-icons/md'
-import React, { useState } from 'react'
 
 import { Wrapper, InputBar, TextField } from './styles'
 
-import { searchTitles } from 'services/titles'
-
 const SearchBar = () => {
   const [text, setText] = useState('')
+  const history = useHistory()
 
   return (
     <Wrapper
       onSubmit={(e) => {
         e.preventDefault()
-        searchTitles(text)
+        history.push(`/${text}`)
       }}
     >
       <InputBar>

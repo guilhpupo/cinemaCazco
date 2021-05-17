@@ -14,9 +14,9 @@ export const ButtonWrapper = styled.div`
   ${({ theme }) => css`
     ${media.lessThan('medium')`
         position: absolute;
-        top: 0;
+        top: ${theme.spacings.xsmall};             
         right: 0;
-        margin: ${theme.spacings.xsmall};        
+                       
     `}
   `}
 `
@@ -40,14 +40,14 @@ export const FullScreenSearch = styled.div<FullScreenSearchProps>`
   ${({ theme, isOpen }) => css`
     display: flex;
     flex-direction: column;
-    background: ${theme.colors.white};
+    background: ${theme.colors.darkBlue};
     position: fixed;
     z-index: ${theme.layers.menu};
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    height: 100vh;
+    right: 1.8rem;
+    height: 6.6rem;
     overflow: hidden;
     transition: opacity 0.3s ease-in-out;
     opacity: ${isOpen ? 1 : 0};

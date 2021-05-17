@@ -6,6 +6,8 @@ export const Wrapper = styled.article`
   width: 20rem;
   height: 28.8rem;
 
+  cursor: pointer;
+
   ${media.greaterThan('medium')`
   width: 25rem;
   height: 36rem;
@@ -17,7 +19,7 @@ export const Wrapper = styled.article`
   `}
 `
 
-type ImageProps = {
+export type ImageProps = {
   src: string
 }
 
@@ -38,7 +40,6 @@ export const Caption = styled.div`
     background-color: rgba(0, 0, 0, 0.7);
     padding: ${theme.spacings.small};
 
-    border-radius: 0 0 ${theme.border.radius} ${theme.border.radius};
     padding: ${theme.spacings.small};
     position: absolute;
     bottom: 0;

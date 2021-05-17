@@ -3,11 +3,11 @@ import React from 'react'
 import CardSlider from '.'
 import { renderWithTheme } from 'utils/tests/helpers'
 
-import items from '../../mocks/Top10TvShows'
+import mock from 'mocks/Top10TvShows'
 
 describe('<CardSlider />', () => {
-  it('should render with 5 active items', () => {
-    const { container } = renderWithTheme(<CardSlider items={items} />)
-    expect(container.querySelectorAll('.slick-active')).toHaveLength(5)
+  it('should render 10 items', () => {
+    const { container } = renderWithTheme(<CardSlider items={mock} />)
+    expect(container.querySelectorAll('.keen-slider__slide')).toHaveLength(10)
   })
 })

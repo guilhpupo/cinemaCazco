@@ -1,14 +1,21 @@
 import styled, { css, DefaultTheme } from 'styled-components'
+import media from 'styled-media-query'
 import { HeadingProps } from '.'
 
 const wrapperModifiers = {
   large: (theme: DefaultTheme) => css`
-    font-size: ${theme.font.sizes.xxlarge};
+    font-size: ${theme.font.sizes.xlarge};
     font-weight: ${theme.font.bold};
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.xxlarge};      
+    `}
   `,
   normal: (theme: DefaultTheme) => css`
-    font-size: ${theme.font.sizes.xlarge};
+    font-size: ${theme.font.sizes.medium};
     font-weight: ${theme.font.normal};
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.xlarge};      
+    `}
   `,
   white: (theme: DefaultTheme) => css`
     color: ${theme.colors.white};

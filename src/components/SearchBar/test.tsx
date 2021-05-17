@@ -13,6 +13,5 @@ describe('<SearchBar />', () => {
       screen.getByPlaceholderText(/search movies, tv shows.../i)
     ).toBeInTheDocument()
     expect(screen.getByLabelText(/search/i)).toBeInTheDocument()
-    expect(screen.getAllByRole('radio')).toHaveLength(2)
   })
 })

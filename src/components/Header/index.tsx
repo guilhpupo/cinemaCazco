@@ -1,9 +1,15 @@
-import Logo from 'components/Logo'
-
 import React, { useState } from 'react'
-import MediaMatch from 'utils/components/MediaMatch'
 
-import { MdSearch as SearchIcon, MdClose as CloseIcon } from 'react-icons/md'
+import Logo from 'components/Logo'
+import Button from 'components/Button'
+import SearchBar from 'components/SearchBar'
+
+import {
+  MdSearch as SearchIcon,
+  MdYoutubeSearchedFor as ReturnIcon
+} from 'react-icons/md'
+
+import MediaMatch from 'utils/components/MediaMatch'
 
 import {
   ButtonWrapper,
@@ -13,10 +19,6 @@ import {
   SearchSection,
   Wrapper
 } from './styles'
-import Button from 'components/Button'
-import SearchBar from 'components/SearchBar'
-
-import Heading from 'components/Heading'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -49,13 +51,12 @@ const Header = () => {
       <FullScreenSearch aria-hidden={!isOpen} isOpen={isOpen} role="search">
         <ButtonWrapper onClick={() => setIsOpen(false)}>
           <Button
-            icon={<CloseIcon aria-label="Close Search" />}
-            color="darkBlue"
+            icon={<ReturnIcon aria-label="Close Search" />}
+            color="white"
           />
         </ButtonWrapper>
 
         <SearchSection>
-          <Heading color="orange">Search</Heading>
           <SearchBar />
         </SearchSection>
       </FullScreenSearch>

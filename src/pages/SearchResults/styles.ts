@@ -6,11 +6,9 @@ export const Wrapper = styled.main`
     min-height: 100vh;
   `}
 `
-
-export const Sliders = styled.section`
-  ${({ theme }) => css`
-    > h2:nth-child(n + 2) {
-      margin-top: ${theme.spacings.medium};
-    }
-  `}
+export const LoadingSpinner = styled.div`
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
 `

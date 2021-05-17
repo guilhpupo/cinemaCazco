@@ -1,86 +1,68 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useKeenSlider } from 'keen-slider/react'
 
-import {
-  MdArrowForward as ArrowRightIcon,
-  MdArrowBack as ArrowLeftIcon
-} from 'react-icons/md'
-import Slider, { SliderSettings } from 'utils/components/Slider'
 import Card, { CardProps } from 'components/Card'
+import {
+  BsChevronLeft as ArrowLeftIcon,
+  BsChevronRight as ArrowRightIcon
+} from 'react-icons/bs'
 
-import { Wrapper } from './styles'
+import sliderBreakpoints from './slider-breakpoints'
 
-const settings: SliderSettings = {
-  arrows: true,
-  slidesToShow: 4.7,
-  infinite: false,
-  lazyLoad: 'ondemand',
-  responsive: [
-    {
-      breakpoint: 1375,
-      settings: {
-        arrows: true,
-        slidesToShow: 4.4
-      }
-    },
-    {
-      breakpoint: 1024,
-      settings: {
-        arrows: false,
-        slidesToShow: 3.4
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        slidesToShow: 2.8
-      }
-    },
-    {
-      breakpoint: 570,
-      settings: {
-        arrows: false,
-        slidesToShow: 2.4
-      }
-    },
-    {
-      breakpoint: 400,
-      settings: {
-        arrows: false,
-        slidesToShow: 2.2
-      }
-    },
-    {
-      breakpoint: 360,
-      settings: {
-        arrows: false,
-        slidesToShow: 1.7
-      }
-    },
-    {
-      breakpoint: 320,
-      settings: {
-        arrows: false,
-        slidesToShow: 1.2
-      }
-    }
-  ],
-  nextArrow: <ArrowRightIcon aria-label="next" />,
-  prevArrow: <ArrowLeftIcon aria-label="previous" />
-}
+import { ArrowLeft, ArrowRight, Arrows, Wrapper } from './styles'
+import MediaMatch from 'utils/components/MediaMatch'
 
 export type CardSliderProps = {
   items: CardProps[]
+  page?: number
 }
 
-const CardSlider = ({ items }: CardSliderProps) => (
-  <Wrapper>
-    <Slider settings={settings}>
-      {items.map((item, index) => (
-        <Card key={index} {...item} />
-      ))}
-    </Slider>
-  </Wrapper>
-)
+const CardSlider = ({ items }: CardSliderProps) => {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
+    initial: 0,
+    slideChanged(s) {
+      setCurrentSlide(s.details().relativeSlide)
+    },
+    spacing: 10,
+    slidesPerView: 4.7,
+    loop: false,
+    mode: 'free-snap',
+    resetSlide: true,
+    breakpoints: sliderBreakpoints
+  })
+
+  useEffect(() => {
+    if (slider) slider.refresh()
+  }, [slider, items])
+
+  return (
+    <Wrapper className="navigation-wrapper">
+      <div ref={sliderRef} className="keen-slider">
+        {items.map((item, index) => (
+          <Card key={index} {...item} className="keen-slider__slide" />
+        ))}
+      </div>
+      <MediaMatch showOnDesktop>
+        {slider && (
+          <Arrows>
+            <ArrowLeft
+              onClick={() => slider.prev()}
+              disabled={currentSlide == 0}
+            >
+              <ArrowLeftIcon />
+            </ArrowLeft>
+            <ArrowRight
+              onClick={() => slider.next()}
+              disabled={currentSlide >= slider.details().size - 4}
+            >
+              <ArrowRightIcon />
+            </ArrowRight>
+          </Arrows>
+        )}
+      </MediaMatch>
+    </Wrapper>
+  )
+}
 
 export default CardSlider

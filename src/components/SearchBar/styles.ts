@@ -4,7 +4,7 @@ export const Wrapper = styled.form`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
 
     @media (min-width: 769px) {
       min-width: 30rem;
@@ -21,7 +21,7 @@ export const InputBar = styled.div`
   ${({ theme }) => css`
     display: flex;
     align-items: center;
-    background-color: ${theme.colors.lightGray};
+    background-color: ${theme.colors.white};
     height: 4rem;
     padding: 0 ${theme.spacings.xsmall};
     border-radius: ${theme.border.radius};
