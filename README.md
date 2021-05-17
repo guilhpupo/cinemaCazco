@@ -37,9 +37,9 @@
 
 <h2>Mobo (375x667)</h2>
 <div align="center" display="flex">
-   <img src="./public/screenshots/home-mobo.png" width="400px">
-   <img src="./public/screenshots/search-results-mobo.png" width="400px">
-   <img src="./public/screenshots/title-mobo.png" width="400px">   
+   <img src="./public/screenshots/home-mobo.png" width="200px">
+   <img src="./public/screenshots/search-results-mobo.png" width="200px">
+   <img src="./public/screenshots/title-mobo.png" width="200px">   
 </div>
 
 # :rocket: Technologies
