@@ -37,9 +37,9 @@
 
 <h2>Mobo (375x667)</h2>
 <div align="center" display="flex">
-   <img src="./public/screenshots/home-mobo.png" width="400px">
-   <img src="./public/screenshots/search-results-mobo.png" width="400px">
-   <img src="./public/screenshots/title-mobo.png" width="400px">   
+   <img src="./public/screenshots/home-mobo.png" width="200px">
+   <img src="./public/screenshots/search-results-mobo.png" width="200px">
+   <img src="./public/screenshots/title-mobo.png" width="200px">   
 </div>
 
 # :rocket: Technologies
@@ -70,7 +70,6 @@ $ yarn install
 # Rename .env-sample to .env
 $ rename .env-sample .env
 # Get your own API Key on http://www.omdbapi.com/apikey.aspx and paste it on .env file
-<a href="http://www.omdbapi.com/apikey.aspx ">Get your Free API Key</a>
 # Run Aplication
 $ yarn start
 ```
@@ -88,7 +87,7 @@ Go to http://localhost:3000/ to see the application running.
 
 # :bug: Issues
 
-Create a <a href="https://github.com/guilhpupo/cazcoCinema/issues">new issue report</a>, it will be an honor to be able to help you solve and further improve our application.
+Create a <a href="https://github.com/guilhpupo/cinemaCazco/issues">new issue report</a>, it will be an honor to be able to help you solve and further improve our application.
 
 # :page_facing_up: License
 
